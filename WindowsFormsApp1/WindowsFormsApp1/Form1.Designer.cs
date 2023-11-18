@@ -34,10 +34,10 @@ namespace WindowsFormsApp1
             this.bthuy = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbhienpass = new System.Windows.Forms.CheckBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,13 +91,6 @@ namespace WindowsFormsApp1
             this.label3.TabIndex = 4;
             this.label3.Text = "Pass:";
             // 
-            // txtuser
-            // 
-            this.txtuser.Location = new System.Drawing.Point(251, 214);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(226, 22);
-            this.txtuser.TabIndex = 5;
-            // 
             // txtpass
             // 
             this.txtpass.Location = new System.Drawing.Point(251, 311);
@@ -124,6 +117,13 @@ namespace WindowsFormsApp1
             this.cbhienpass.TabIndex = 8;
             this.cbhienpass.Text = "Hiện mật khẩu";
             this.cbhienpass.UseVisualStyleBackColor = true;
+            // 
+            // txtuser
+            // 
+            this.txtuser.Location = new System.Drawing.Point(251, 214);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(226, 22);
+            this.txtuser.TabIndex = 5;
             // 
             // Form1
             // 
@@ -154,10 +154,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button bthuy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox cbhienpass;
+        private System.Windows.Forms.TextBox txtuser;
     }
 }
 
