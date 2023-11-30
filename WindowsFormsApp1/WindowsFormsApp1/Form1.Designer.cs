@@ -36,8 +36,8 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbhienpass = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,13 +54,14 @@ namespace WindowsFormsApp1
             // 
             // btdangnhap
             // 
-            this.btdangnhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btdangnhap.ForeColor = System.Drawing.Color.Black;
             this.btdangnhap.Location = new System.Drawing.Point(216, 430);
             this.btdangnhap.Name = "btdangnhap";
             this.btdangnhap.Size = new System.Drawing.Size(108, 34);
             this.btdangnhap.TabIndex = 1;
             this.btdangnhap.Text = "Đăng nhập";
             this.btdangnhap.UseVisualStyleBackColor = true;
+            this.btdangnhap.Click += new System.EventHandler(this.btdangnhap_Click);
             // 
             // bthuy
             // 
@@ -70,6 +71,7 @@ namespace WindowsFormsApp1
             this.bthuy.TabIndex = 2;
             this.bthuy.Text = "Thoát";
             this.bthuy.UseVisualStyleBackColor = true;
+            this.bthuy.Click += new System.EventHandler(this.bthuy_Click);
             // 
             // label2
             // 
@@ -102,18 +104,9 @@ namespace WindowsFormsApp1
             // 
             this.txtpass.Location = new System.Drawing.Point(251, 311);
             this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(226, 22);
             this.txtpass.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.pngtree_flat_restaurant_illustration_png_image_1568130;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 131);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 252);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // cbhienpass
             // 
@@ -124,6 +117,17 @@ namespace WindowsFormsApp1
             this.cbhienpass.TabIndex = 8;
             this.cbhienpass.Text = "Hiện mật khẩu";
             this.cbhienpass.UseVisualStyleBackColor = true;
+            this.cbhienpass.CheckedChanged += new System.EventHandler(this.cbhienpass_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.pngtree_flat_restaurant_illustration_png_image_1568130;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 131);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(184, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -140,7 +144,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btdangnhap);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "s";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

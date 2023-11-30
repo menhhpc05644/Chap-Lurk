@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DUAN1lamlaiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BanAn">
+    <Key>
+      <PropertyRef Name="MaBanAn" />
+    </Key>
+    <Property Name="MaBanAn" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Soghe" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DUAN1lamlai.dbo.ChiTietHD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChiTietHD">
+    <Key>
+      <PropertyRef Name="SoHD" />
+      <PropertyRef Name="MaThucDon" />
+      <PropertyRef Name="SoLuong" />
+      <PropertyRef Name="Dongia" />
+    </Key>
+    <Property Name="SoHD" Type="int" Nullable="false" />
+    <Property Name="MaThucDon" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+    <Property Name="Dongia" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="SoHD" />
+    </Key>
+    <Property Name="SoHD" Type="int" Nullable="false" />
+    <Property Name="ThoiGian" Type="datetime" Nullable="false" />
+    <Property Name="MaBanAn" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="SoKhach" Type="int" Nullable="false" />
+    <Property Name="MaNV" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="TongTien" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoaiThucDon">
+    <Key>
+      <PropertyRef Name="MaLoai" />
+    </Key>
+    <Property Name="MaLoai" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="TenLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Hoten" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+    <Property Name="TenDN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Matkhau" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Quyen" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DUAN1lamlai.dbo.Phancong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Phancong">
+    <Key>
+      <PropertyRef Name="NgayPC" />
+      <PropertyRef Name="Ca" />
+      <PropertyRef Name="MaNV" />
+      <PropertyRef Name="MaBanAn" />
+    </Key>
+    <Property Name="NgayPC" Type="datetime" Nullable="false" />
+    <Property Name="Ca" Type="int" Nullable="false" />
+    <Property Name="MaNV" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="MaBanAn" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThucDon">
+    <Key>
+      <PropertyRef Name="MaThucDon" />
+    </Key>
+    <Property Name="MaThucDon" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="MaLoai" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="TenThucDon" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DonViTinh" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Gia" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__ChiTietHD__MaThu__5812160E">
+    <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="1" />
+    <End Role="ChiTietHD" Type="Self.ChiTietHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThucDon">
+        <PropertyRef Name="MaThucDon" />
+      </Principal>
+      <Dependent Role="ChiTietHD">
+        <PropertyRef Name="MaThucDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHD__SoHD__59063A47">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="ChiTietHD" Type="Self.ChiTietHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="SoHD" />
+      </Principal>
+      <Dependent Role="ChiTietHD">
+        <PropertyRef Name="SoHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__MaBanAn__5629CD9C">
+    <End Role="BanAn" Type="Self.BanAn" Multiplicity="1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BanAn">
+        <PropertyRef Name="MaBanAn" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaBanAn" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__MaNV__5535A963">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Phancong__MaBanA__4D94879B">
+    <End Role="BanAn" Type="Self.BanAn" Multiplicity="1" />
+    <End Role="Phancong" Type="Self.Phancong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BanAn">
+        <PropertyRef Name="MaBanAn" />
+      </Principal>
+      <Dependent Role="Phancong">
+        <PropertyRef Name="MaBanAn" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Phancong__MaNV__4CA06362">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="Phancong" Type="Self.Phancong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNV" />
+      </Principal>
+      <Dependent Role="Phancong">
+        <PropertyRef Name="MaNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThucDon__MaLoai__52593CB8">
+    <End Role="LoaiThucDon" Type="Self.LoaiThucDon" Multiplicity="1" />
+    <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiThucDon">
+        <PropertyRef Name="MaLoai" />
+      </Principal>
+      <Dependent Role="ThucDon">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DUAN1lamlaiModelStoreContainer">
+    <EntitySet Name="BanAn" EntityType="Self.BanAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiThucDon" EntityType="Self.LoaiThucDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThucDon" EntityType="Self.ThucDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietHD" EntityType="Self.ChiTietHD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChiTietHD].[SoHD] AS [SoHD], 
+    [ChiTietHD].[MaThucDon] AS [MaThucDon], 
+    [ChiTietHD].[SoLuong] AS [SoLuong], 
+    [ChiTietHD].[Dongia] AS [Dongia]
+    FROM [dbo].[ChiTietHD] AS [ChiTietHD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Phancong" EntityType="Self.Phancong" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Phancong].[NgayPC] AS [NgayPC], 
+    [Phancong].[Ca] AS [Ca], 
+    [Phancong].[MaNV] AS [MaNV], 
+    [Phancong].[MaBanAn] AS [MaBanAn]
+    FROM [dbo].[Phancong] AS [Phancong]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__ChiTietHD__MaThu__5812160E" Association="Self.FK__ChiTietHD__MaThu__5812160E">
+      <End Role="ThucDon" EntitySet="ThucDon" />
+      <End Role="ChiTietHD" EntitySet="ChiTietHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietHD__SoHD__59063A47" Association="Self.FK__ChiTietHD__SoHD__59063A47">
+      <End Role="HoaDon" EntitySet="HoaDon" />
+      <End Role="ChiTietHD" EntitySet="ChiTietHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__MaBanAn__5629CD9C" Association="Self.FK__HoaDon__MaBanAn__5629CD9C">
+      <End Role="BanAn" EntitySet="BanAn" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__MaNV__5535A963" Association="Self.FK__HoaDon__MaNV__5535A963">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Phancong__MaBanA__4D94879B" Association="Self.FK__Phancong__MaBanA__4D94879B">
+      <End Role="BanAn" EntitySet="BanAn" />
+      <End Role="Phancong" EntitySet="Phancong" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Phancong__MaNV__4CA06362" Association="Self.FK__Phancong__MaNV__4CA06362">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="Phancong" EntitySet="Phancong" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThucDon__MaLoai__52593CB8" Association="Self.FK__ThucDon__MaLoai__52593CB8">
+      <End Role="LoaiThucDon" EntitySet="LoaiThucDon" />
+      <End Role="ThucDon" EntitySet="ThucDon" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
