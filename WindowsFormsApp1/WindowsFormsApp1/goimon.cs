@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private List<string> dataList = new List<string>();
+       
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
@@ -147,27 +147,65 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        // Danh sách để lưu trữ dữ liệu
-
-        private void SaveDataToList()
+        private void SaveDataToFile(string filePath)
         {
-            dataList.Clear(); // Xóa dữ liệu cũ trong danh sách trước khi lưu
-            foreach (ListViewItem item in listView1.Items)
+            try
             {
-                // Lưu dữ liệu từ mỗi item trong ListView vào danh sách
-                dataList.Add(item.Text); // Ở đây, giả sử chỉ lưu dữ liệu từ cột đầu tiên của mỗi item
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (ListViewItem item in listView2.Items)
+                    {
+                        string line = "";
+
+                        // Lấy giá trị từ mỗi SubItem trong mỗi ListViewItem và ghép thành một dòng
+                        foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
+                        {
+                            line += subItem.Text + "\t"; // Sử dụng ký tự phân cách (ví dụ: tab) để phân tách giá trị
+                        }
+
+                        // Ghi mỗi dòng dữ liệu vào tệp tin
+                        writer.WriteLine(line.Trim());
+                    }
+                }
+
+                MessageBox.Show("Dữ liệu từ ListView đã được lưu vào tệp tin.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi lưu dữ liệu: " + ex.Message);
             }
         }
 
+
+
         private void btluu_Click(object sender, EventArgs e)
         {
-            SaveDataToList();
-            MessageBox.Show("Dữ liệu đã được lưu vào danh sách.");
+            if (cbbbanan.SelectedItem != null)
+            {
+                string chonban = cbbbanan.SelectedItem.ToString().Trim();
+
+                if (chonban.Equals("B01"))
+                {
+                    SaveDataToFile("D:/1DUAN1/CODE/ban01.txt");
+                }
+                else if (chonban.Equals("B02"))
+                {
+                    SaveDataToFile("D:/1DUAN1/CODE/ban02.txt");
+                }
+                else if (chonban.Equals("B03"))
+                {
+                    SaveDataToFile("D:/1DUAN1/CODE/ban03.txt");
+                }
+                // Thêm các trường hợp khác nếu cần thiết
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn bàn ăn.");
+            }
+
+
         }
-        public ListView GetDataListView()
-        {
-            return listView2;
-        }
+      
 
         private void label2_Click(object sender, EventArgs e)
         {

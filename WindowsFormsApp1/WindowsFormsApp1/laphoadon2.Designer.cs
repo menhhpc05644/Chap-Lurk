@@ -49,7 +49,6 @@ namespace WindowsFormsApp1
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -109,6 +108,7 @@ namespace WindowsFormsApp1
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(770, 158);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
@@ -148,6 +148,7 @@ namespace WindowsFormsApp1
             this.btlaphoadon.TabIndex = 19;
             this.btlaphoadon.Text = "Lập hóa đơn";
             this.btlaphoadon.UseVisualStyleBackColor = true;
+            this.btlaphoadon.Click += new System.EventHandler(this.btlaphoadon_Click);
             // 
             // btthoat
             // 
@@ -220,22 +221,11 @@ namespace WindowsFormsApp1
             this.columnHeader5.Text = "Số lượng";
             this.columnHeader5.Width = 100;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(314, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // laphoadon2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 531);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lvdanhsach);
             this.Controls.Add(this.btthoat);
             this.Controls.Add(this.btdangxuat);
@@ -281,6 +271,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button button1;
     }
 }
