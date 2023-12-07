@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DUANMOTModelStoreContainer" CdmEntityContainer="DUANMOTEntities8">
+    <EntitySetMapping Name="BanAns">
+      <EntityTypeMapping TypeName="DUANMOTModel.BanAn">
+        <MappingFragment StoreEntitySet="BanAn">
+          <ScalarProperty Name="MaBanAn" ColumnName="MaBanAn" />
+          <ScalarProperty Name="Soghe" ColumnName="Soghe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietHDs">
+      <EntityTypeMapping TypeName="DUANMOTModel.ChiTietHD">
+        <MappingFragment StoreEntitySet="ChiTietHD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
+          <ScalarProperty Name="MaThucDon" ColumnName="MaThucDon" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gias">
+      <EntityTypeMapping TypeName="DUANMOTModel.Gia">
+        <MappingFragment StoreEntitySet="Gia">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NgayAdGia" ColumnName="NgayAdGia" />
+          <ScalarProperty Name="MaThucDon" ColumnName="MaThucDon" />
+          <ScalarProperty Name="Gia1" ColumnName="Gia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDons">
+      <EntityTypeMapping TypeName="DUANMOTModel.HoaDon">
+        <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
+          <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+          <ScalarProperty Name="MaBanAn" ColumnName="MaBanAn" />
+          <ScalarProperty Name="SoKhach" ColumnName="SoKhach" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiThucDons">
+      <EntityTypeMapping TypeName="DUANMOTModel.LoaiThucDon">
+        <MappingFragment StoreEntitySet="LoaiThucDon">
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="DUANMOTModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="Hoten" ColumnName="Hoten" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="TenDN" ColumnName="TenDN" />
+          <ScalarProperty Name="Matkhau" ColumnName="Matkhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phancongs">
+      <EntityTypeMapping TypeName="DUANMOTModel.Phancong">
+        <MappingFragment StoreEntitySet="Phancong">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ca" ColumnName="Ca" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="MaBanAn" ColumnName="MaBanAn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThucDons">
+      <EntityTypeMapping TypeName="DUANMOTModel.ThucDon">
+        <MappingFragment StoreEntitySet="ThucDon">
+          <ScalarProperty Name="MaThucDon" ColumnName="MaThucDon" />
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="TenThucDon" ColumnName="TenThucDon" />
+          <ScalarProperty Name="DonViTinh" ColumnName="DonViTinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

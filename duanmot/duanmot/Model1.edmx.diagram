@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0005db4899694a8aaf0909a3f5d6bd95" Name="Diagram1">
+        <EntityTypeShape EntityType="DUANMOTModel.BanAn" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.ChiTietHD" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.Gia" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.HoaDon" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.LoaiThucDon" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.NhanVien" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.Phancong" Width="1.5" PointX="6" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUANMOTModel.ThucDon" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="DUANMOTModel.FK__HoaDon__MaBanAn__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__Phancong__MaBanA__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__ChiTietHD__MaThu__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__ChiTietHD__SoHD__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__Gia__MaThucDon__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__HoaDon__MaNV__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__ThucDon__MaLoai__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="DUANMOTModel.FK__Phancong__MaNV__145C0A3F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
