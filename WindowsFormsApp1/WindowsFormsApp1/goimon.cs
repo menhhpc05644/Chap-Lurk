@@ -59,13 +59,14 @@ namespace WindowsFormsApp1
                 using (DUAN1lamlaiEntities BD = new DUAN1lamlaiEntities())
                 {
                     var thucDons = BD.ThucDons.Where(td => td.LoaiThucDon.TenLoai == selectedLoai).ToList();
-
+                  
                     foreach (var thucDon in thucDons)
                     {
                         ListViewItem item = new ListViewItem(thucDon.TenThucDon);
                         // Thêm các sub item cần thiết tại đây
                         listView1.Items.Add(item);
                     }
+
                 }
             }
 
@@ -93,35 +94,53 @@ namespace WindowsFormsApp1
         {
             if (listView1.SelectedItems.Count > 0)
             {
-                // Lặp qua từng mục đã chọn trong listView1 và thêm chúng vào listView2
-                foreach (ListViewItem selectedItem in listView1.SelectedItems)
+                try
                 {
-                    // Kiểm tra và bắt lỗi nếu một hoặc nhiều trường thông tin được bỏ trống
-                    if (!string.IsNullOrEmpty(cbbbanan.Text) && !string.IsNullOrEmpty(txtsonguoi.Text) &&
-                        !string.IsNullOrEmpty(txtgia.Text) && !string.IsNullOrEmpty(txtsoluong.Text))
+                    // Lặp qua từng mục đã chọn trong listView1 và thêm chúng vào listView2
+                    foreach (ListViewItem selectedItem in listView1.SelectedItems)
                     {
-                        // Tạo một ListViewItem mới từ mục đã chọn và thêm vào listView2
-                        ListViewItem newItem = (ListViewItem)selectedItem.Clone();
-                        newItem.SubItems.Add(cbbbanan.Text);
-                        newItem.SubItems.Add(txtsonguoi.Text);
-                        newItem.SubItems.Add(txtgia.Text);
-                        newItem.SubItems.Add(txtsoluong.Text);
-                        listView2.Items.Add(newItem);
+                        if (!string.IsNullOrEmpty(cbbbanan.Text) && !string.IsNullOrEmpty(txtsonguoi.Text) &&
+                            !string.IsNullOrEmpty(txtgia.Text) && !string.IsNullOrEmpty(txtsoluong.Text))
+                        {
+                            // Kiểm tra xem giá trị nhập vào các TextBox txtsonguoi, txtgia, txtsoluong có phải là số không
+                            int soNguoi, gia, soLuong;
+
+                            if (!int.TryParse(txtsonguoi.Text, out soNguoi) || !int.TryParse(txtgia.Text, out gia) || !int.TryParse(txtsoluong.Text, out soLuong))
+                            {
+                                MessageBox.Show("Vui lòng nhập số cho Số người, Giá và Số lượng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return; // Thoát khỏi vòng lặp nếu dữ liệu không hợp lệ
+                            }
+
+                            // Tạo một ListViewItem mới từ mục đã chọn và thêm vào listView2
+                            ListViewItem newItem = (ListViewItem)selectedItem.Clone();
+                            newItem.SubItems.Add(cbbbanan.Text);
+                            newItem.SubItems.Add(txtsonguoi.Text);
+                            newItem.SubItems.Add(txtgia.Text);
+                            newItem.SubItems.Add(txtsoluong.Text);
+                            listView2.Items.Add(newItem);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return; // Thoát khỏi vòng lặp nếu dữ liệu không hợp lệ
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn món ăn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng chọn món ăn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
 
+
         }
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -190,11 +209,11 @@ namespace WindowsFormsApp1
                     }
                 }
 
-                MessageBox.Show("Dữ liệu từ ListView đã được lưu vào tệp tin.");
+                MessageBox.Show("Đã lưu gọi món.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi khi lưu dữ liệu: " + ex.Message);
+                MessageBox.Show("Lưu thất bại " + ex.Message);
             }
         }
 
@@ -218,7 +237,7 @@ namespace WindowsFormsApp1
                 {
                     SaveDataToFile("D:/1DUAN1/CODE/ban03.txt");
                 }
-                // Thêm các trường hợp khác nếu cần thiết
+              
             }
             else
             {
@@ -230,6 +249,11 @@ namespace WindowsFormsApp1
       
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsonguoi_TextChanged(object sender, EventArgs e)
         {
 
         }

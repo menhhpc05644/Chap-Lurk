@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(279, 126);
+            this.label3.Location = new System.Drawing.Point(279, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
             this.label3.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
             // cbbbanan
             // 
             this.cbbbanan.FormattingEnabled = true;
-            this.cbbbanan.Location = new System.Drawing.Point(363, 126);
+            this.cbbbanan.Location = new System.Drawing.Point(397, 133);
             this.cbbbanan.Name = "cbbbanan";
             this.cbbbanan.Size = new System.Drawing.Size(142, 24);
             this.cbbbanan.TabIndex = 8;
@@ -135,10 +135,11 @@ namespace WindowsFormsApp1
             // 
             // txtsonguoi
             // 
-            this.txtsonguoi.Location = new System.Drawing.Point(363, 181);
+            this.txtsonguoi.Location = new System.Drawing.Point(397, 187);
             this.txtsonguoi.Name = "txtsonguoi";
             this.txtsonguoi.Size = new System.Drawing.Size(142, 22);
             this.txtsonguoi.TabIndex = 10;
+            this.txtsonguoi.TextChanged += new System.EventHandler(this.txtsonguoi_TextChanged);
             // 
             // label5
             // 
@@ -151,14 +152,14 @@ namespace WindowsFormsApp1
             // 
             // txtgia
             // 
-            this.txtgia.Location = new System.Drawing.Point(363, 238);
+            this.txtgia.Location = new System.Drawing.Point(397, 238);
             this.txtgia.Name = "txtgia";
             this.txtgia.Size = new System.Drawing.Size(142, 22);
             this.txtgia.TabIndex = 12;
             // 
             // txtsoluong
             // 
-            this.txtsoluong.Location = new System.Drawing.Point(363, 282);
+            this.txtsoluong.Location = new System.Drawing.Point(397, 298);
             this.txtsoluong.Name = "txtsoluong";
             this.txtsoluong.Size = new System.Drawing.Size(142, 22);
             this.txtsoluong.TabIndex = 13;
@@ -167,7 +168,7 @@ namespace WindowsFormsApp1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(279, 287);
+            this.label6.Location = new System.Drawing.Point(284, 303);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 17);
             this.label6.TabIndex = 14;
@@ -177,7 +178,7 @@ namespace WindowsFormsApp1
             // 
             this.btthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btthem.Location = new System.Drawing.Point(282, 332);
+            this.btthem.Location = new System.Drawing.Point(287, 358);
             this.btthem.Name = "btthem";
             this.btthem.Size = new System.Drawing.Size(99, 74);
             this.btthem.TabIndex = 15;
@@ -223,9 +224,9 @@ namespace WindowsFormsApp1
             this.columnHeader4,
             this.columnHeader5});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(511, 119);
+            this.listView2.Location = new System.Drawing.Point(559, 119);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(598, 425);
+            this.listView2.Size = new System.Drawing.Size(550, 425);
             this.listView2.TabIndex = 20;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
