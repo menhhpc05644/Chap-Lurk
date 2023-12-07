@@ -49,11 +49,12 @@ namespace duanmot
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Brown;
+            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label7.Location = new System.Drawing.Point(345, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 29);
+            this.label7.Size = new System.Drawing.Size(173, 29);
             this.label7.TabIndex = 26;
             this.label7.Text = "PHÂN CÔNG";
             // 
@@ -94,27 +95,33 @@ namespace duanmot
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.Location = new System.Drawing.Point(685, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 17);
+            this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 16;
             this.label3.Text = "Bàn";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(397, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 17);
+            this.label2.Size = new System.Drawing.Size(32, 17);
             this.label2.TabIndex = 15;
             this.label2.Text = "Ca:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(64, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nhân viên:";
             // 
@@ -137,8 +144,9 @@ namespace duanmot
             // 
             // btreset
             // 
+            this.btreset.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btreset.Image = global::duanmot.Properties.Resources.Refresh;
-            this.btreset.Location = new System.Drawing.Point(768, 166);
+            this.btreset.Location = new System.Drawing.Point(758, 136);
             this.btreset.Name = "btreset";
             this.btreset.Size = new System.Drawing.Size(118, 109);
             this.btreset.TabIndex = 38;
@@ -148,7 +156,7 @@ namespace duanmot
             // btadd
             // 
             this.btadd.Image = global::duanmot.Properties.Resources.Add;
-            this.btadd.Location = new System.Drawing.Point(768, 298);
+            this.btadd.Location = new System.Drawing.Point(758, 268);
             this.btadd.Name = "btadd";
             this.btadd.Size = new System.Drawing.Size(118, 109);
             this.btadd.TabIndex = 22;
@@ -158,7 +166,7 @@ namespace duanmot
             // btdelete
             // 
             this.btdelete.Image = global::duanmot.Properties.Resources.Delete;
-            this.btdelete.Location = new System.Drawing.Point(768, 439);
+            this.btdelete.Location = new System.Drawing.Point(758, 409);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(118, 109);
             this.btdelete.TabIndex = 21;
@@ -177,7 +185,7 @@ namespace duanmot
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(947, 560);
+            this.ClientSize = new System.Drawing.Size(947, 529);
             this.Controls.Add(this.txtca);
             this.Controls.Add(this.btreset);
             this.Controls.Add(this.cbnhanvien);
