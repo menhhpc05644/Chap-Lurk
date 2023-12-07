@@ -14,9 +14,11 @@ namespace WindowsFormsApp1
 
     public partial class goimon : Form
     {
+        private DUAN1lamlaiEntities dbContext = new DUAN1lamlaiEntities(); // Khởi tạo DbContext của bạn
         public goimon()
         {
             InitializeComponent();
+            TaiDuLieuVaoListView();
         }
        
 
@@ -48,23 +50,43 @@ namespace WindowsFormsApp1
 
         private void cbbloaiTD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
-            string loai = cbbloaiTD.SelectedItem.ToString();
-            if(loai=="Thức ăn")
+            listView1.Items.Clear(); // Xóa dữ liệu cũ trong ListView trước khi thêm dữ liệu mới
+
+            if (cbbloaiTD.SelectedItem != null) // Kiểm tra xem có loại thực đơn nào được chọn không
             {
-                listView1.Items.Add("Bánh mì ");
-                listView1.Items.Add("Cơm chiên");
-                listView1.Items.Add("Hủ tiếu");
-                listView1.Items.Add("Bánh canh");
+                string selectedLoai = cbbloaiTD.SelectedItem.ToString(); // Lấy loại thực đơn được chọn từ ComboBox
+
+                using (DUAN1lamlaiEntities BD = new DUAN1lamlaiEntities())
+                {
+                    var thucDons = BD.ThucDons.Where(td => td.LoaiThucDon.TenLoai == selectedLoai).ToList();
+
+                    foreach (var thucDon in thucDons)
+                    {
+                        ListViewItem item = new ListViewItem(thucDon.TenThucDon);
+                        // Thêm các sub item cần thiết tại đây
+                        listView1.Items.Add(item);
+                    }
+                }
             }
-            else if(loai=="Thức uống")
+
+        }
+        private void TaiDuLieuVaoListView()
+        {
+            try
             {
-                listView1.Items.Add("Coca ");
-                listView1.Items.Add("Pepsi");
-                listView1.Items.Add("Trà ô long");
-                listView1.Items.Add("Trà đường");
+                var duLieu = dbContext.ThucDons.ToList(); // Lấy dữ liệu từ cơ sở dữ liệu bằng Entity Framework
+
+                foreach (var thucThe in duLieu)
+                {
+                    ListViewItem item = new ListViewItem(thucThe.TenThucDon); // Thay "ThuocTinh1" bằng tên thực tế của các thuộc tính trong ThucTheCuaBan của bạn
+                    //item.SubItems.Add(thucThe.TenThucDon); // Thêm các sub item cần thiết
+                    listView1.Items.Add(item);
+                }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
 
         private void btthem_Click(object sender, EventArgs e)
@@ -97,7 +119,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Vui lòng chọn món ăn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            
+
 
         }
 
