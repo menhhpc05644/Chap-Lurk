@@ -120,6 +120,7 @@ namespace duanmot
             // 
             // cbbanan
             // 
+            this.cbbanan.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cbbanan.FormattingEnabled = true;
             this.cbbanan.Location = new System.Drawing.Point(734, 60);
             this.cbbanan.Name = "cbbanan";
@@ -175,6 +176,7 @@ namespace duanmot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(947, 560);
             this.Controls.Add(this.txtca);
             this.Controls.Add(this.btreset);
