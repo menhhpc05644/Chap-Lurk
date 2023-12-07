@@ -17,14 +17,3 @@ D:\1DUAN1\CODE\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsForm
 D:\1DUAN1\CODE\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\1DUAN1\CODE\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 D:\1DUAN1\CODE\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.laphoadon2.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.goimon.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.giaodienchinh.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.laphoadon.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.laphoadon2.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
-D:\FPT polytechnic\Chap-Lurk\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
