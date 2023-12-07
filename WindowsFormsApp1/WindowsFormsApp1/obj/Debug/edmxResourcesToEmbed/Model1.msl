@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DUAN1ModelStoreContainer" CdmEntityContainer="DUAN1Entities1">
+  <EntityContainerMapping StorageEntityContainer="DUAN1lamlaiModelStoreContainer" CdmEntityContainer="DUAN1lamlaiEntities">
     <EntitySetMapping Name="BanAns">
-      <EntityTypeMapping TypeName="DUAN1Model.BanAn">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.BanAn">
         <MappingFragment StoreEntitySet="BanAn">
           <ScalarProperty Name="MaBanAn" ColumnName="MaBanAn" />
           <ScalarProperty Name="Soghe" ColumnName="Soghe" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HoaDons">
-      <EntityTypeMapping TypeName="DUAN1Model.HoaDon">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.HoaDon">
         <MappingFragment StoreEntitySet="HoaDon">
           <ScalarProperty Name="SoHD" ColumnName="SoHD" />
           <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
@@ -20,7 +20,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LoaiThucDons">
-      <EntityTypeMapping TypeName="DUAN1Model.LoaiThucDon">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.LoaiThucDon">
         <MappingFragment StoreEntitySet="LoaiThucDon">
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
           <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
@@ -28,7 +28,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhanViens">
-      <EntityTypeMapping TypeName="DUAN1Model.NhanVien">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
           <ScalarProperty Name="Hoten" ColumnName="Hoten" />
@@ -40,7 +40,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ThucDons">
-      <EntityTypeMapping TypeName="DUAN1Model.ThucDon">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.ThucDon">
         <MappingFragment StoreEntitySet="ThucDon">
           <ScalarProperty Name="MaThucDon" ColumnName="MaThucDon" />
           <ScalarProperty Name="TenThucDon" ColumnName="TenThucDon" />
@@ -50,7 +50,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietHDs">
-      <EntityTypeMapping TypeName="DUAN1Model.ChiTietHD">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.ChiTietHD">
         <MappingFragment StoreEntitySet="ChiTietHD">
           <ScalarProperty Name="SoHD" ColumnName="SoHD" />
           <ScalarProperty Name="MaThucDon" ColumnName="MaThucDon" />
@@ -60,7 +60,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Phancongs">
-      <EntityTypeMapping TypeName="DUAN1Model.Phancong">
+      <EntityTypeMapping TypeName="DUAN1lamlaiModel.Phancong">
         <MappingFragment StoreEntitySet="Phancong">
           <ScalarProperty Name="NgayPC" ColumnName="NgayPC" />
           <ScalarProperty Name="Ca" ColumnName="Ca" />
@@ -69,7 +69,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="FK__HoaDon__MaBanAn__30F848ED" TypeName="DUAN1Model.FK__HoaDon__MaBanAn__30F848ED" StoreEntitySet="HoaDon">
+    <AssociationSetMapping Name="FK__HoaDon__MaBanAn__5629CD9C" TypeName="DUAN1lamlaiModel.FK__HoaDon__MaBanAn__5629CD9C" StoreEntitySet="HoaDon">
       <EndProperty Name="BanAn">
         <ScalarProperty Name="MaBanAn" ColumnName="MaBanAn" />
       </EndProperty>
@@ -77,7 +77,7 @@
         <ScalarProperty Name="SoHD" ColumnName="SoHD" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="FK__HoaDon__MaNV__300424B4" TypeName="DUAN1Model.FK__HoaDon__MaNV__300424B4" StoreEntitySet="HoaDon">
+    <AssociationSetMapping Name="FK__HoaDon__MaNV__5535A963" TypeName="DUAN1lamlaiModel.FK__HoaDon__MaNV__5535A963" StoreEntitySet="HoaDon">
       <EndProperty Name="NhanVien">
         <ScalarProperty Name="MaNV" ColumnName="MaNV" />
       </EndProperty>
@@ -85,7 +85,7 @@
         <ScalarProperty Name="SoHD" ColumnName="SoHD" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="FK__ThucDon__MaLoai__2D27B809" TypeName="DUAN1Model.FK__ThucDon__MaLoai__2D27B809" StoreEntitySet="ThucDon">
+    <AssociationSetMapping Name="FK__ThucDon__MaLoai__52593CB8" TypeName="DUAN1lamlaiModel.FK__ThucDon__MaLoai__52593CB8" StoreEntitySet="ThucDon">
       <EndProperty Name="LoaiThucDon">
         <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
       </EndProperty>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DUAN1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="DUAN1lamlaiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="BanAn">
     <Key>
       <PropertyRef Name="MaBanAn" />
@@ -8,7 +8,7 @@
     <Property Name="Soghe" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'DUAN1.dbo.ChiTietHD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'DUAN1lamlai.dbo.ChiTietHD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="ChiTietHD">
     <Key>
       <PropertyRef Name="SoHD" />
@@ -51,7 +51,7 @@ warning 6002: The table/view 'DUAN1.dbo.ChiTietHD' does not have a primary key d
     <Property Name="Quyen" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'DUAN1lamlai.dbo.Phancong' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Phancong">
     <Key>
       <PropertyRef Name="NgayPC" />
@@ -74,7 +74,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
     <Property Name="DonViTinh" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Gia" Type="float" Nullable="false" />
   </EntityType>
-  <Association Name="FK__ChiTietHD__MaThu__32E0915F">
+  <Association Name="FK__ChiTietHD__MaThu__5812160E">
     <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="1" />
     <End Role="ChiTietHD" Type="Self.ChiTietHD" Multiplicity="*" />
     <ReferentialConstraint>
@@ -86,7 +86,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietHD__SoHD__33D4B598">
+  <Association Name="FK__ChiTietHD__SoHD__59063A47">
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
     <End Role="ChiTietHD" Type="Self.ChiTietHD" Multiplicity="*" />
     <ReferentialConstraint>
@@ -98,7 +98,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__MaBanAn__30F848ED">
+  <Association Name="FK__HoaDon__MaBanAn__5629CD9C">
     <End Role="BanAn" Type="Self.BanAn" Multiplicity="1" />
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -110,7 +110,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__MaNV__300424B4">
+  <Association Name="FK__HoaDon__MaNV__5535A963">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -122,7 +122,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Phancong__MaBanA__286302EC">
+  <Association Name="FK__Phancong__MaBanA__4D94879B">
     <End Role="BanAn" Type="Self.BanAn" Multiplicity="1" />
     <End Role="Phancong" Type="Self.Phancong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -134,7 +134,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Phancong__MaNV__276EDEB3">
+  <Association Name="FK__Phancong__MaNV__4CA06362">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="Phancong" Type="Self.Phancong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -146,7 +146,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ThucDon__MaLoai__2D27B809">
+  <Association Name="FK__ThucDon__MaLoai__52593CB8">
     <End Role="LoaiThucDon" Type="Self.LoaiThucDon" Multiplicity="1" />
     <End Role="ThucDon" Type="Self.ThucDon" Multiplicity="*" />
     <ReferentialConstraint>
@@ -158,7 +158,7 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DUAN1ModelStoreContainer">
+  <EntityContainer Name="DUAN1lamlaiModelStoreContainer">
     <EntitySet Name="BanAn" EntityType="Self.BanAn" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiThucDon" EntityType="Self.LoaiThucDon" Schema="dbo" store:Type="Tables" />
@@ -180,31 +180,31 @@ warning 6002: The table/view 'DUAN1.dbo.Phancong' does not have a primary key de
     [Phancong].[MaBanAn] AS [MaBanAn]
     FROM [dbo].[Phancong] AS [Phancong]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__ChiTietHD__MaThu__32E0915F" Association="Self.FK__ChiTietHD__MaThu__32E0915F">
+    <AssociationSet Name="FK__ChiTietHD__MaThu__5812160E" Association="Self.FK__ChiTietHD__MaThu__5812160E">
       <End Role="ThucDon" EntitySet="ThucDon" />
       <End Role="ChiTietHD" EntitySet="ChiTietHD" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietHD__SoHD__33D4B598" Association="Self.FK__ChiTietHD__SoHD__33D4B598">
+    <AssociationSet Name="FK__ChiTietHD__SoHD__59063A47" Association="Self.FK__ChiTietHD__SoHD__59063A47">
       <End Role="HoaDon" EntitySet="HoaDon" />
       <End Role="ChiTietHD" EntitySet="ChiTietHD" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__MaBanAn__30F848ED" Association="Self.FK__HoaDon__MaBanAn__30F848ED">
+    <AssociationSet Name="FK__HoaDon__MaBanAn__5629CD9C" Association="Self.FK__HoaDon__MaBanAn__5629CD9C">
       <End Role="BanAn" EntitySet="BanAn" />
       <End Role="HoaDon" EntitySet="HoaDon" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__MaNV__300424B4" Association="Self.FK__HoaDon__MaNV__300424B4">
+    <AssociationSet Name="FK__HoaDon__MaNV__5535A963" Association="Self.FK__HoaDon__MaNV__5535A963">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="HoaDon" EntitySet="HoaDon" />
     </AssociationSet>
-    <AssociationSet Name="FK__Phancong__MaBanA__286302EC" Association="Self.FK__Phancong__MaBanA__286302EC">
+    <AssociationSet Name="FK__Phancong__MaBanA__4D94879B" Association="Self.FK__Phancong__MaBanA__4D94879B">
       <End Role="BanAn" EntitySet="BanAn" />
       <End Role="Phancong" EntitySet="Phancong" />
     </AssociationSet>
-    <AssociationSet Name="FK__Phancong__MaNV__276EDEB3" Association="Self.FK__Phancong__MaNV__276EDEB3">
+    <AssociationSet Name="FK__Phancong__MaNV__4CA06362" Association="Self.FK__Phancong__MaNV__4CA06362">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="Phancong" EntitySet="Phancong" />
     </AssociationSet>
-    <AssociationSet Name="FK__ThucDon__MaLoai__2D27B809" Association="Self.FK__ThucDon__MaLoai__2D27B809">
+    <AssociationSet Name="FK__ThucDon__MaLoai__52593CB8" Association="Self.FK__ThucDon__MaLoai__52593CB8">
       <End Role="LoaiThucDon" EntitySet="LoaiThucDon" />
       <End Role="ThucDon" EntitySet="ThucDon" />
     </AssociationSet>

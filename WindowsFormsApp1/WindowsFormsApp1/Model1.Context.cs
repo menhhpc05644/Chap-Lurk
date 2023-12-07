@@ -13,10 +13,10 @@ namespace WindowsFormsApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DUAN1Entities1 : DbContext
+    public partial class DUAN1lamlaiEntities : DbContext
     {
-        public DUAN1Entities1()
-            : base("name=DUAN1Entities1")
+        public DUAN1lamlaiEntities()
+            : base("name=DUAN1lamlaiEntities")
         {
         }
     

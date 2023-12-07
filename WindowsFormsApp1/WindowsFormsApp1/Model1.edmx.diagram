@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="531f78866d584cb998bb540bb2c584b9" Name="Diagram1">
-        <EntityTypeShape EntityType="DUAN1Model.BanAn" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUAN1Model.HoaDon" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUAN1Model.LoaiThucDon" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUAN1Model.NhanVien" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUAN1Model.ThucDon" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUAN1Model.ChiTietHD" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DUAN1Model.Phancong" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="DUAN1Model.FK__HoaDon__MaBanAn__30F848ED" ManuallyRouted="false" />
-        <AssociationConnector Association="DUAN1Model.FK__Phancong__MaBanA__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="DUAN1Model.FK__ChiTietHD__SoHD__33D4B598" ManuallyRouted="false" />
-        <AssociationConnector Association="DUAN1Model.FK__HoaDon__MaNV__300424B4" ManuallyRouted="false" />
-        <AssociationConnector Association="DUAN1Model.FK__ThucDon__MaLoai__2D27B809" ManuallyRouted="false" />
-        <AssociationConnector Association="DUAN1Model.FK__Phancong__MaNV__276EDEB3" ManuallyRouted="false" />
-        <AssociationConnector Association="DUAN1Model.FK__ChiTietHD__MaThu__32E0915F" ManuallyRouted="false" />
+      <Diagram DiagramId="5654a18ef16e46df83e1cefbd52c76b8" Name="Diagram1">
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.BanAn" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.HoaDon" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.LoaiThucDon" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.NhanVien" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.ThucDon" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.ChiTietHD" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DUAN1lamlaiModel.Phancong" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__HoaDon__MaBanAn__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__Phancong__MaBanA__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__ChiTietHD__SoHD__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__HoaDon__MaNV__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__ThucDon__MaLoai__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__Phancong__MaNV__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="DUAN1lamlaiModel.FK__ChiTietHD__MaThu__5812160E" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
